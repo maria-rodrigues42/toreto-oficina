@@ -1,0 +1,574 @@
+/* --- MOBILE FIRST - ESTILO AUTOMOTIVO MASCULINO --- */
+:root {
+    --vermelho: #DC143C; 
+    --vermelho-escuro: #B91C1C;
+    --azul: #1E40AF;
+    --azul-escuro: #1E3A8A;
+    --preto: #0a0a0a;
+    --grafite: #1a1a1a;
+    --cinza: #2d2d2d;
+    --branco: #ffffff;
+    --whatsapp: #25d366;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #0a0a0a;
+    color: var(--branco);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* Textura de asfalto */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(90deg, transparent, transparent 3px, rgba(255,255,255,0.01) 3px, rgba(255,255,255,0.01) 6px);
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+@keyframes fadeInPage {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+main, header, footer {
+    position: relative;
+    z-index: 2;
+}
+
+section {
+    padding: 50px 0;
+}
+
+/* Animação de revelação */
+.reveal-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--vermelho);
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    text-align: center;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--vermelho);
+    margin: 15px auto 0;
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+}
+
+.description {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+/* --- HERO MOBILE FIRST - ENERGIA AUTOMOTIVA --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 20px 40px;
+    background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .container {
+    z-index: 1;
+    text-align: center;
+}
+
+.hero img.logo {
+    max-width: 260px;
+    width: 100%;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 4px 12px rgba(255, 215, 0, 0.25));
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--vermelho);
+    margin-bottom: 15px;
+    line-height: 1.1;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
+}
+
+.hero h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+.hero h3 span {
+    color: var(--vermelho);
+    font-weight: 700;
+}
+
+.hero .description {
+    margin-bottom: 30px;
+}
+
+/* --- BOTÕES - ARREDONDADOS --- */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--vermelho) 0%, var(--vermelho-escuro) 100%);
+    color: #000;
+    padding: 18px 35px;
+    font-size: 1.1rem;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+}
+
+.cta-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 10px rgba(255, 215, 0, 0.5);
+}
+
+.cta-button .text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cta-button .text i {
+    font-size: 1.3rem;
+}
+
+.tire-track {
+    display: none;
+}
+
+/* --- CARDS ESTILO INDUSTRIAL --- */
+.services-grid,
+.area-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: left;
+}
+
+.service-item,
+.area-item {
+    background: linear-gradient(135deg, var(--grafite) 0%, var(--cinza) 100%);
+    padding: 25px;
+    border-left: 5px solid var(--vermelho);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.service-item::before,
+.area-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, transparent 50%, rgba(255,215,0,0.05) 50%);
+}
+
+.service-item:active,
+.area-item:active {
+    transform: translateX(5px);
+    border-left-width: 8px;
+}
+
+.service-item i,
+.area-item i {
+    font-size: 2.5rem;
+    color: var(--azul);
+    margin-bottom: 15px;
+    display: block;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.service-item h3,
+.area-item h4 {
+    font-size: 1.2rem;
+    color: var(--branco);
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.service-item p,
+.area-item p {
+    color: rgba(255,255,255,0.85);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.secao-clara {
+    background: var(--preto);
+}
+
+/* --- CARROSSEL - DIRETO E LIMPO --- */
+.carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--preto);
+    border: 3px solid var(--cinza);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: none;
+}
+
+.carousel-slide.fade {
+    display: block;
+    animation: fadeSlide 0.5s;
+}
+
+@keyframes fadeSlide {
+    from { opacity: 0.6; }
+    to { opacity: 1; }
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 215, 0, 0.9);
+    color: #000;
+    border: none;
+    padding: 15px 12px;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s;
+    border-radius: 8px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:active, .next:active {
+    background: var(--vermelho-escuro);
+}
+
+.carousel-dots {
+    text-align: center;
+    padding: 15px 0;
+    background: var(--preto);
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background: var(--cinza);
+    border: 2px solid var(--vermelho);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.active-dot,
+.dot:active {
+    background: var(--vermelho);
+    transform: scale(1.2);
+}
+
+/* --- BOTÕES FLUTUANTES MOBILE - FIXOS NA PARTE INFERIOR --- */
+.mobile-buttons-container {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 10px;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+.call-button-mobile {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    font-size: 0.95rem;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 50px;
+    transition: all 0.2s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.call-button-mobile.tel {
+    background: linear-gradient(135deg, var(--vermelho) 0%, var(--vermelho-escuro) 100%);
+    color: #000;
+}
+
+.call-button-mobile.tel i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.call-button-mobile.zap {
+    background: var(--whatsapp);
+    color: #fff;
+    flex: 0.6;
+}
+
+.call-button-mobile.zap i {
+    font-size: 2rem;
+}
+
+.call-button-mobile:active {
+    filter: brightness(0.8);
+    transform: scale(0.95);
+}
+
+/* --- DEPOIMENTOS - SIMPLES E DIRETOS --- */
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.depoimento-card {
+    background: var(--grafite);
+    border-top: 4px solid var(--vermelho);
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.depoimento-card .estrelas {
+    color: var(--vermelho);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.depoimento-card p {
+    font-style: italic;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.depoimento-card cite {
+    color: var(--vermelho-escuro);
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: linear-gradient(180deg, var(--preto) 0%, var(--grafite) 100%);
+    padding: 50px 20px 30px;
+    text-align: center;
+    border-top: 4px solid var(--vermelho);
+}
+
+footer h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+footer .contato-info {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--vermelho);
+    margin: 25px 0 15px;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+footer .social-icons a {
+    width: 50px;
+    height: 50px;
+    background: var(--cinza);
+    color: var(--vermelho);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    transition: all 0.3s;
+    border: 2px solid var(--vermelho);
+    border-radius: 50%;
+}
+
+footer .social-icons a:active {
+    background: var(--vermelho);
+    color: #000;
+    transform: scale(0.9);
+}
+
+footer .slogan {
+    font-style: italic;
+    color: rgba(255,255,255,0.6);
+    margin-top: 30px;
+    font-size: 1rem;
+}
+
+/* --- RESPONSIVE MOBILE FIRST --- */
+@media (max-width: 768px) {
+    h1, .hero h1 { 
+        font-size: 2.3rem;
+    }
+    
+    h2 { 
+        font-size: 1.8rem;
+    }
+    
+    .hero img.logo { 
+        max-width: 240px;
+    }
+    
+    .cta-button { 
+        font-size: 1rem;
+        padding: 16px 30px;
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+    
+    .prev, .next {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+        padding: 10px 8px;
+    }
+}
+
+@media (min-width: 769px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .services-grid,
+    .area-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .depoimentos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    
+    /* Esconde botões mobile em desktop */
+    .mobile-buttons-container {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

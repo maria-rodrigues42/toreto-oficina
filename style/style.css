@@ -467,9 +467,9 @@ a {
     color: white;
     width: 60px;
     height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
     font-size: 2rem;
     border-radius: 50% !important;
     box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
@@ -1287,3 +1287,9 @@ a {
 }
 
 /* Floating WhatsApp Button */
+
+.wa-float i {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+}

@@ -518,3 +518,135 @@ a {
 .btn-stark, .btn-massive, .service-item, .about-image-wrapper img, .hero-visual img, .service-img, .map-container iframe, .contact-wrapper, .overlap-box {
     border-radius: 8px !important;
 }
+
+/* Contact Grid & Map */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.contact-info-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info-panel h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: var(--font-heading);
+}
+
+.contact-info-panel p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-info-panel i {
+    color: var(--gold);
+    font-size: 1.5rem;
+}
+
+.working-hours {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(0,0,0,0.02);
+    border-left: 4px solid var(--gold);
+}
+
+.working-hours h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Corporate Footer */
+.corporate-footer {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 6rem 4rem 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+.footer-logo {
+    height: 60px;
+    margin-bottom: 1.5rem;
+}
+
+.footer-col h4 {
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-family: var(--font-heading);
+}
+
+.footer-col p {
+    color: #aaa;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+}
+
+.links-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links-col ul li {
+    margin-bottom: 0.8rem;
+}
+
+.links-col ul li a {
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.links-col ul li a:hover {
+    color: var(--gold);
+}
+
+.social-links-footer a {
+    color: var(--white);
+    background: rgba(255,255,255,0.1);
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.social-links-footer a:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 992px) {
+    .contact-grid, .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

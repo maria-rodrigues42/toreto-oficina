@@ -513,3 +513,8 @@ a {
     filter: grayscale(0%);
     border-bottom: 2px solid var(--gold);
 }
+
+/* Soft Border Radius */
+.btn-stark, .btn-massive, .service-item, .about-image-wrapper img, .hero-visual img, .service-img, .map-container iframe, .contact-wrapper, .overlap-box {
+    border-radius: 8px !important;
+}

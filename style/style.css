@@ -88,6 +88,8 @@ a {
 
 .brand-logo {
     height: 40px;
+    transform: scale(3.5);
+    transform-origin: left center;
 }
 
 .nav-links {

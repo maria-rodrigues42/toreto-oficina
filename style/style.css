@@ -133,7 +133,6 @@ h2::after {
 }
 
 .hero img.logo {
-    mix-blend-mode: lighten;
     max-width: 260px;
     width: 100%;
     margin-bottom: 25px;
@@ -515,7 +514,6 @@ footer .slogan {
     }
     
     .hero img.logo { 
-    mix-blend-mode: lighten;
         max-width: 240px;
     }
     

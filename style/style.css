@@ -1,12 +1,12 @@
 /* --- MOBILE FIRST - ESTILO AUTOMOTIVO MASCULINO --- */
 :root {
-    --vermelho: #E60000;
-    --vermelho-escuro: #8B0000;
-    --vermelho-brilhante: #FF1A1A;
-    --preto: #050505;
-    --grafite: #121212;
-    --cinza: #2A2A2A;
-    --branco: #F8F8F8;
+    --vermelho: #A4161A;
+    --vermelho-escuro: #660708;
+    --vermelho-brilhante: #A4161A;
+    --preto: #0B090A;
+    --grafite: #161A1D;
+    --cinza: #161A1D;
+    --branco: #FFFFFF;
     --whatsapp: #25d366;
 }
 
@@ -26,24 +26,15 @@ img {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background: #0a0a0a;
+    background: var(--preto);
     color: var(--branco);
     line-height: 1.5;
     overflow-x: hidden;
 }
 
-/* Textura de asfalto */
+/* Textura de asfalto (Removida para um visual mais limpo e premium) */
 body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: repeating-linear-gradient(90deg, transparent, transparent 3px, rgba(255,255,255,0.01) 3px, rgba(255,255,255,0.01) 6px);
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.3;
+    display: none;
 }
 
 @keyframes fadeInPage {
@@ -121,7 +112,7 @@ h2::after {
     align-items: center;
     justify-content: center;
     padding: 70px 20px 40px;
-    background: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
+    background: linear-gradient(180deg, var(--preto) 0%, var(--grafite) 100%);
     position: relative;
     overflow: hidden;
 }
@@ -135,7 +126,7 @@ h2::after {
     max-width: 260px;
     width: 100%;
     margin-bottom: 25px;
-    filter: drop-shadow(0 4px 12px rgba(255, 215, 0, 0.25));
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
 }
 
 .hero h1 {
@@ -170,7 +161,7 @@ h2::after {
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, var(--vermelho) 0%, var(--vermelho-escuro) 100%);
-    color: #000;
+    color: var(--branco);
     padding: 18px 35px;
     font-size: 1.1rem;
     font-weight: 900;
@@ -180,12 +171,12 @@ h2::after {
     letter-spacing: 1px;
     border-radius: 50px;
     transition: all 0.3s ease;
-    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+    box-shadow: 0 6px 20px rgba(164, 22, 26, 0.4);
 }
 
 .cta-button:active {
     transform: scale(0.95);
-    box-shadow: 0 3px 10px rgba(255, 215, 0, 0.5);
+    box-shadow: 0 3px 10px rgba(164, 22, 26, 0.6);
 }
 
 .cta-button .text {
@@ -229,7 +220,7 @@ h2::after {
     right: 0;
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, transparent 50%, rgba(255,215,0,0.05) 50%);
+    background: linear-gradient(135deg, transparent 50%, rgba(164, 22, 26, 0.1) 50%);
 }
 
 .service-item:active,
@@ -303,8 +294,8 @@ h2::after {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(255, 215, 0, 0.9);
-    color: #000;
+    background: var(--vermelho);
+    color: var(--branco);
     border: none;
     padding: 15px 12px;
     font-size: 20px;
@@ -355,50 +346,49 @@ h2::after {
 .mobile-buttons-container {
     position: fixed;
     bottom: 20px;
-    left: 0;
-    right: 0;
+    right: 20px;
     display: flex;
-    gap: 10px;
-    padding: 0 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
     z-index: 1000;
 }
 
 .call-button-mobile {
-    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 18px;
-    font-size: 0.95rem;
-    font-weight: 900;
-    font-family: 'Poppins', sans-serif;
     text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border: none;
-    border-radius: 50px;
     transition: all 0.2s;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
 }
 
 .call-button-mobile.tel {
     background: linear-gradient(135deg, var(--vermelho) 0%, var(--vermelho-escuro) 100%);
-    color: #000;
+    color: var(--branco);
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
 }
 
 .call-button-mobile.tel i {
     margin-right: 8px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .call-button-mobile.zap {
     background: var(--whatsapp);
-    color: #fff;
-    flex: 0.6;
+    color: var(--branco);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
 }
 
 .call-button-mobile.zap i {
-    font-size: 2rem;
+    font-size: 2.2rem;
 }
 
 .call-button-mobile:active {

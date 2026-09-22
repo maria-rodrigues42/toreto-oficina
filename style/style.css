@@ -208,7 +208,7 @@ h2::after {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
-    text-align: left;
+    text-align: center;
 }
 
 .service-item,
@@ -540,12 +540,12 @@ footer .slogan {
     
     .services-grid,
     .area-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr; max-width: 800px; margin: 0 auto; text-align: center;
         gap: 25px;
     }
     
     .depoimentos-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr; max-width: 800px; margin: 0 auto; text-align: center;
     }
     
     h2 {
